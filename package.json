@@ -1,0 +1,19 @@
+{
+  "name": "node_api1",
+  "version": "1.0.0",
+  "description": "A node api",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/normanrs/node_api1.git"
+  },
+  "author": "Norm Schultz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/normanrs/node_api1/issues"
+  },
+  "homepage": "https://github.com/normanrs/node_api1#readme"
+}
