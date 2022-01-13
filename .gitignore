@@ -1,4 +1,5 @@
 .DS_Store
-/.idea
-/tmp/
 .env*
+/.idea
+/node_modules
+/tmp/
