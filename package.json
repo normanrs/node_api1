@@ -20,5 +20,8 @@
     "body-parser": "^1.19.1",
     "express": "^4.17.1",
     "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7"
   }
 }
