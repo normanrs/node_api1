@@ -1,6 +1,9 @@
 const queries = require('../lib/queries');
 const req = {};
-const res = {};
+const res = any = {
+    json: jest.fn(),
+    status: function(code) {return code},
+};
 
 describe('queries', () => {
 
@@ -10,7 +13,7 @@ describe('queries', () => {
     });
 
     it('should return city data by name', () => {
-        const conn = queries.getCitiesByName('Holt');
+        const conn = queries.getCities(req, res);
         expect(conn);
     });
 
