@@ -1,28 +1,10 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
 const app = express();
+const router = require('./lib/routes');
 const port = 3000;
-const db = require('./lib/queries')
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
-
-app.get('/info', (req, res) => {
-    res.json({ info: 'A test API using Node and Postgres for funzies' })
-});
-
-app.get('/healthcheck', (req, res) => {
-    db.ensureDbConn(req, res);
-    res.send
-});
-
-app.get('/cities', (req, res) => {
-    db.getCities(req, res);
-    res.send
-});
+app.use('/', router);
 
 app.listen(port, () => {
-    console.log(`Test API running on port ${port} - for reelz!`)
+    console.log(`API at your service on port ${port}`)
 })
