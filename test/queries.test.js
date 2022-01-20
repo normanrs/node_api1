@@ -1,20 +1,21 @@
 const queries = require('../lib/queries');
-const req = {};
-const res = any = {
-    json: jest.fn(),
-    status: function(code) {return code},
-};
+
 
 describe('queries', () => {
 
-    it('should ensure db connection', () => {
-        const conn = queries.ensureDbConn(req, res);
-        expect(conn);
+    it('should ensure db connection', async () => {
+        const result = await queries.healthcheck();
+        expect(result);
     });
 
-    it('should return city data by name', () => {
-        const conn = queries.getCities(req, res);
-        expect(conn);
+    it('should return a random city', async () => {
+        const result = await queries.randomCity();
+        expect(result).toHaveProperty('zipcode');
+    });
+
+    it('should return city search results', async () => {
+        const result = await queries.citySearch('holt', 10);
+        expect(result.length).toBeGreaterThan(0);
     });
 
 });

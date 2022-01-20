@@ -17,7 +17,7 @@ describe('Integration tests:', () => {
   test('should return a city at random response', async () => {
     const resp = await http.get('/randomCity');
     expect(resp.status).toEqual(200);
-    expect(resp.body).toHaveProperty('name');
+    expect(resp.body).toHaveProperty('zipcode');
   });
 
   test('should return cities matching search', async () => {
