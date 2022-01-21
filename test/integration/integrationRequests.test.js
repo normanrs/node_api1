@@ -1,4 +1,4 @@
-const {setup} = require('../integration/integrationTestSetup')
+const setup = require('../integrationTestSetup')
 
 describe('Integration tests:', () => {
   let http;

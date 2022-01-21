@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "jest"
+    "test-unit": "jest --verbose test/unit",
+    "test-integration": "jest --verbose test/integration"
   },
   "repository": {
     "type": "git",

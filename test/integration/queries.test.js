@@ -1,4 +1,4 @@
-const queries = require('../lib/queries');
+const queries = require('../../lib/queries');
 
 
 describe('queries', () => {
@@ -13,7 +13,7 @@ describe('queries', () => {
         expect(result).toHaveProperty('zipcode');
     });
 
-    it('should return city search results', async () => {
+    it('should return cities that start with search term', async () => {
         const result = await queries.citySearch('holt', 10);
         expect(result.length).toBeGreaterThan(0);
     });
