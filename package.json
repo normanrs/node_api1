@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "test-unit": "jest --verbose test/unit",
-    "test-integration": "jest --verbose test/integration"
+    "test-integration": "jest --verbose test/integration",
+    "coverage-unit": "jest --coverage test/unit"
   },
   "repository": {
     "type": "git",
