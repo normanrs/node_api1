@@ -1,7 +1,7 @@
 const cors = require('cors');
 const router = require('express').Router();
 
-const controller = require('../lib/controller');
+const controller = require('.//controller');
 router.use(cors());
 
 router.get('/healthcheck', controller.healthcheck);

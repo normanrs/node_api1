@@ -1,4 +1,4 @@
-const queries = require('../../lib/queries');
+const queries = require('../../src/queries');
 
 
 describe('queries', () => {

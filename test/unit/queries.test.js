@@ -1,5 +1,5 @@
-const queries = require('../../lib/queries');
-jest.mock('../../lib/db');
+const queries = require('../../src/queries');
+jest.mock('../../src/db');
 
 describe('queries', () => {
 
